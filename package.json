@@ -4,8 +4,7 @@
   "description": "",
   "main": "queues.js",
   "scripts": {
-    "test": "mocha -r should *_test.js",
-    "cover": "nyc npm test"
+    "test": "nyc mocha -r should *_test.js"
   },
   "nyc": {
     "check-coverage": true,
