@@ -38,7 +38,7 @@ SinglyLinkedList.prototype.append = function(value) {
 
   const newNode = new Node(value);
 
-  if (!this.tail) {
+  if (!this.head) {
     this.head = newNode;
     this.tail = newNode;
     return;
