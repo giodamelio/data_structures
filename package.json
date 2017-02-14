@@ -4,8 +4,9 @@
   "description": "",
   "main": "queues.js",
   "scripts": {
-    "test": "mocha -r should *_test.js",
-    "cover": "nyc npm test"
+    "test": "mocha -r should src/*_test.js",
+    "cover": "nyc npm test",
+    "lint": "eslint src/*.js"
   },
   "nyc": {
     "check-coverage": true,
@@ -20,7 +21,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@scottnonnenberg/eslint-config-thehelp": "^0.7.0",
     "debug": "^2.6.0",
+    "eslint": "^3.15.0",
     "mocha": "^3.2.0",
     "nyc": "^10.1.2",
     "should": "^11.1.2"
