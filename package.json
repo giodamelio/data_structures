@@ -4,7 +4,7 @@
   "description": "",
   "main": "queues.js",
   "scripts": {
-    "test": "mocha -r should src/*_test.js",
+    "test": "mocha -r should test/*.js",
     "cover": "nyc npm test",
     "lint": "eslint src/*.js"
   },
