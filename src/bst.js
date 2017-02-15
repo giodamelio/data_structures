@@ -12,6 +12,7 @@ function BST() {
 BST.prototype.insert = function(value) {
   const newNode = new Node(value);
 
+  // If the BST is empty, add the new value as the root
   if (!this.root) {
     this.root = newNode;
     return;
@@ -47,5 +48,4 @@ BST.prototype.insert = function(value) {
   }
 };
 
-exports.BST = BST;
-exports.Node = Node;
+module.exports = BST;

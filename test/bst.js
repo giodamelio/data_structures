@@ -1,39 +1,47 @@
-const should = require('should');
+const ava = require('ava');
 
-const { BST, Node } = require('../src/bst');
+const BST = require('../src/bst');
 
-describe('BST', () => {
-  it('Start empty', () => {
-    const bst = new BST();
-    should.not.exist(bst.root);
-  });
-
-  it('Push single item', () => {
-    const bst = new BST();
-    bst.insert(10);
-    bst.root.value.should.equal(10);
-  });
-
-  it('Push smaller item', () => {
-    const bst = new BST();
-    bst.insert(10);
-    bst.insert(5);
-    bst.root.left.value.should.equal(5);
-  });
-
-  it('Push bigger item', () => {
-    const bst = new BST();
-    bst.insert(10);
-    bst.insert(15);
-    bst.root.right.value.should.equal(15);
-  });
-
-  describe('Node', () => {
-    it('Create a node', () => {
-      const node = new Node(3.141);
-      node.value.should.equal(3.141);
-      should.not.exist(node.left);
-      should.not.exist(node.left);
-    });
-  });
+ava.test('Start empty', (t) => {
+  const bst = new BST();
+  t.falsy(bst.root);
 });
+
+ava.test('Push Single Item', (t) => {
+  const bst = new BST();
+  bst.insert(10);
+  t.is(bst.root.value, 10);
+});
+
+ava.test('Push Smaller Item', (t) => {
+  const bst = new BST();
+  bst.insert(10);
+  bst.insert(5);
+  t.is(bst.root.left.value, 5);
+});
+
+ava.test('Push Bigger Item', (t) => {
+  const bst = new BST();
+  bst.insert(10);
+  bst.insert(15);
+  t.is(bst.root.right.value, 15);
+});
+
+ava.test('Push Existing Item', (t) => {
+  const bst = new BST();
+  bst.insert(10);
+  bst.insert(10);
+  t.is(bst.root.value, 10);
+});
+
+ava.test('Push Many Item', (t) => {
+  const bst = new BST();
+  bst.insert(10);
+  for (let i = 1; i <= 10; i++) {
+    bst.insert(10 - i);
+    bst.insert(10 + i);
+  }
+  t.is(bst.root.left.left.value, 8);
+  t.is(bst.root.right.right.value, 12);
+});
+

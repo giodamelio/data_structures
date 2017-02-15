@@ -2,11 +2,22 @@
   "name": "data_structures",
   "version": "1.0.0",
   "description": "",
-  "main": "queues.js",
   "scripts": {
-    "test": "mocha -r should test/*.js",
-    "cover": "nyc npm test",
-    "lint": "eslint src/*.js"
+    "test": "ava",
+    "cover": "nyc ava",
+    "lint": "eslint src/ test/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@scottnonnenberg/eslint-config-thehelp": "^0.7.0",
+    "ava": "^0.18.1",
+    "eslint": "^3.15.0",
+    "nyc": "^10.1.2"
+  },
+  "ava": {
+    "verbose": true
   },
   "nyc": {
     "check-coverage": true,
@@ -16,16 +27,5 @@
       "text",
       "text-summary"
     ]
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@scottnonnenberg/eslint-config-thehelp": "^0.7.0",
-    "debug": "^2.6.0",
-    "eslint": "^3.15.0",
-    "mocha": "^3.2.0",
-    "nyc": "^10.1.2",
-    "should": "^11.1.2"
   }
 }
