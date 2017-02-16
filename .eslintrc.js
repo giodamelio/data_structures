@@ -9,5 +9,6 @@ module.exports = {
     'max-statements': 'off',
     'func-names': 'off',
     'arrow-parens': ['error', 'always'],
+    'no-invalid-this': 'off',
   }
 };
