@@ -7,7 +7,7 @@ function insert(value) {
   // If the BST is empty, add the new value as the root
   if (!this.root) {
     this.root = newNode;
-    return;
+    return newNode;
   }
 
   let current = this.root;
@@ -15,14 +15,14 @@ function insert(value) {
   while (current) {
     // The new value is already in the BST
     if (newNode.value === current.value) {
-      return;
+      return current;
     }
 
     // The new value is smaller then the current node so we need to put it on the left
     if (newNode.value < current.value) {
       if (!current.left) {
         current.left = newNode;
-        return;
+        return newNode;
       }
 
       current = current.left;
@@ -32,7 +32,7 @@ function insert(value) {
     if (newNode.value > current.value) {
       if (!current.right) {
         current.right = newNode;
-        return;
+        return newNode;
       }
 
       current = current.right;
