@@ -2,18 +2,18 @@ const ava = require('ava');
 
 const BST = require('../../src/bst');
 
-ava.test('Empty tree', (t) => {
+ava.test('empty tree', (t) => {
   const bst = new BST();
   t.is(bst.toDot(), 'graph {\n}\n');
 });
 
-ava.test('One node', (t) => {
+ava.test('one node', (t) => {
   const bst = new BST();
   bst.insert(10);
   t.is(bst.toDot(), 'graph {\n  10\n}\n');
 });
 
-ava.test('Multiple nodes', (t) => {
+ava.test('multiple nodes', (t) => {
   const bst = new BST();
   bst.insert(10);
   bst.insert(5);
