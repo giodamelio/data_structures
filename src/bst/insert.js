@@ -1,6 +1,7 @@
 const Node = require('./node');
 
 // Insert a new node into the bst
+// eslint-disable-next-line consistent-return
 function insert(value) {
   const newNode = new Node(value);
 
