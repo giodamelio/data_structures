@@ -2,22 +2,14 @@ const ava = require('ava');
 
 const BST = require('../../src/bst');
 
-ava.test('empty tree', (t) => {
-  const bst = new BST();
-
-  t.is(bst.search(10), null);
-});
-
 ava.test('root node', (t) => {
-  const bst = new BST();
-  bst.insert(10);
+  const bst = new BST(10);
 
   t.is(bst.search(10).value, 10);
 });
 
 ava.test('smaller node', (t) => {
-  const bst = new BST();
-  bst.insert(10);
+  const bst = new BST(10);
   bst.insert(5);
   bst.insert(15);
 
@@ -25,8 +17,7 @@ ava.test('smaller node', (t) => {
 });
 
 ava.test('larger node', (t) => {
-  const bst = new BST();
-  bst.insert(10);
+  const bst = new BST(10);
   bst.insert(5);
   bst.insert(15);
 
@@ -34,8 +25,7 @@ ava.test('larger node', (t) => {
 });
 
 ava.test('non existant node', (t) => {
-  const bst = new BST();
-  bst.insert(10);
+  const bst = new BST(10);
   bst.insert(5);
   bst.insert(15);
 

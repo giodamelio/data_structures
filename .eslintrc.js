@@ -7,5 +7,6 @@ module.exports = {
   rules: {
     'max-statements': 'off',
     'no-invalid-this': 'off',
+    'func-names': 'off',
   }
 };

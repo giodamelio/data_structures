@@ -1,18 +1,18 @@
-function BST(startingValues) {
-  this.root = null;
-
-  if (startingValues && Array.isArray(startingValues)) {
-    startingValues.forEach((value) => {
-      this.insert(value);
-    });
+function BST(value) {
+  if (typeof value === 'undefined') {
+    throw new Error('BST MUST have a value');
   }
+
+  this.value = value;
+  this.left = null;
+  this.right = null;
 }
 
-BST.prototype.insert = require('./insert');
-BST.prototype.toDot = require('./to_dot');
-BST.prototype.search = require('./search');
-BST.prototype.size = require('./size');
-BST.prototype.depth = require('./depth');
-BST.prototype.contains = require('./contains');
+require('./insert')(BST);
+require('./to_dot')(BST);
+require('./search')(BST);
+require('./size')(BST);
+require('./depth')(BST);
+require('./contains')(BST);
 
 module.exports = BST;

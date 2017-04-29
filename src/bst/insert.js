@@ -1,44 +1,37 @@
-const Node = require('./node');
+module.exports = function(BST) {
+  // Insert a new node into the bst
+  // eslint-disable-next-line consistent-return
+  BST.prototype.insert = function(value) {
+    const newNode = new BST(value);
 
-// Insert a new node into the bst
-// eslint-disable-next-line consistent-return
-function insert(value) {
-  const newNode = new Node(value);
+    // eslint-disable-next-line consistent-this
+    let current = this;
 
-  // If the BST is empty, add the new value as the root
-  if (!this.root) {
-    this.root = newNode;
-    return newNode;
-  }
-
-  let current = this.root;
-
-  while (current) {
-    // The new value is already in the BST
-    if (newNode.value === current.value) {
-      return current;
-    }
-
-    // The new value is smaller then the current node so we need to put it on the left
-    if (newNode.value < current.value) {
-      if (!current.left) {
-        current.left = newNode;
-        return newNode;
+    while (current) {
+      // The new value is already in the BST
+      if (newNode.value === current.value) {
+        return current;
       }
 
-      current = current.left;
-    }
+      // The new value is smaller then the current node so we need to put it on the left
+      if (newNode.value < current.value) {
+        if (!current.left) {
+          current.left = newNode;
+          return newNode;
+        }
 
-    // The new value is bigger the the current node so we need to put it on the right
-    if (newNode.value > current.value) {
-      if (!current.right) {
-        current.right = newNode;
-        return newNode;
+        current = current.left;
       }
 
-      current = current.right;
-    }
-  }
-}
+      // The new value is bigger the the current node so we need to put it on the right
+      if (newNode.value > current.value) {
+        if (!current.right) {
+          current.right = newNode;
+          return newNode;
+        }
 
-module.exports = insert;
+        current = current.right;
+      }
+    }
+  };
+};
