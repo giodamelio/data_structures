@@ -14,5 +14,6 @@ require('./search')(BST);
 require('./size')(BST);
 require('./depth')(BST);
 require('./contains')(BST);
+require('./balance')(BST);
 
 module.exports = BST;
