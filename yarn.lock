@@ -33,9 +33,15 @@
   dependencies:
     ansi-styles "^2.2.1"
 
-"@scottnonnenberg/eslint-config-thehelp@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@scottnonnenberg/eslint-config-thehelp/-/eslint-config-thehelp-0.7.0.tgz#0b049bc7c6fd8bbb9b89f561f39c0e3df45dc83f"
+"@giodamelio/eslint-config-thehelpining@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@giodamelio/eslint-config-thehelpining/-/eslint-config-thehelpining-0.1.0.tgz#0973b742f231162458a8f3367382f2b9fdbd26f2"
+  dependencies:
+    "@scottnonnenberg/eslint-config-thehelp" "0.8.0"
+
+"@scottnonnenberg/eslint-config-thehelp@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@scottnonnenberg/eslint-config-thehelp/-/eslint-config-thehelp-0.8.0.tgz#78d58d6120767e1e3f53f0f60d5021009afe13fa"
   dependencies:
     "@scottnonnenberg/eslint-plugin-thehelp" "0.3.2"
     eslint "2.11.1"
