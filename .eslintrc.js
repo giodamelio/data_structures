@@ -8,5 +8,6 @@ module.exports = {
     'max-statements': 'off',
     'no-invalid-this': 'off',
     'func-names': 'off',
+    'valid-jsdoc': 'off',
   }
 };

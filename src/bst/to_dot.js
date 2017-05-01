@@ -1,4 +1,10 @@
 module.exports = function(BST) {
+  /**
+   * Convert the BST to [dot][1] format
+   * [1]: https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+   * @returns {String} A [dot][1] formated BST
+   * [1]: https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+   */
   // Convert the BST to dot format
   BST.prototype.toDot = function() {
     let output = 'graph {\n';

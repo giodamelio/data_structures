@@ -1,4 +1,13 @@
 module.exports = function(BST) {
+  /**
+   * Search for a value in the BST.
+   * @param {OrderedValue} - The value we are searching for.
+   * @returns {BST|null} The found node or null if it does not exist
+   * @example
+   * const bst = new BST(10)
+   * assert(bst.search(10).value === 10)
+   * assert(bst.search(666) === null)
+   */
   // eslint-disable-next-line consistent-return
   BST.prototype.search = function(value) {
     // eslint-disable-next-line consistent-this

@@ -1,4 +1,13 @@
 module.exports = function(BST) {
+  /**
+   * Counts the number of nodes in the BST.
+   * @returns {Number}
+   * @example
+   * const bst = new BST(10);
+   * assert(bst.size() === 1);
+   * bst.insert(22);
+   * assert(bst.size() === 2);
+   */
   BST.prototype.size = function() {
     const queue = [this];
     let count = 0;

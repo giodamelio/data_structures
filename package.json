@@ -5,7 +5,8 @@
   "scripts": {
     "test": "ava",
     "cover": "nyc ava",
-    "lint": "eslint src/ test/"
+    "lint": "eslint src/ test/",
+    "docs": "jsdoc -c ./.jsdoc.json src/"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,8 @@
     "@giodamelio/eslint-config-thehelpining": "^0.1.0",
     "ava": "^0.18.1",
     "eslint": "^3.15.0",
+    "jsdoc": "^3.4.3",
+    "minami": "^1.2.3",
     "nyc": "^10.1.2"
   },
   "ava": {

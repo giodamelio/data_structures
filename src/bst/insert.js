@@ -1,5 +1,13 @@
 module.exports = function(BST) {
-  // Insert a new node into the bst
+  /**
+   * Insert a new node into the bst.
+   * @param {OrderedValue} value - The value for the new node
+   * @returns {BST} New BST node
+   * @example
+   * const bst = new BST(10);
+   * const newNode = bst.insert(5); // Returns new node
+   * assert(bst.left === newNode);
+   */
   // eslint-disable-next-line consistent-return
   BST.prototype.insert = function(value) {
     const newNode = new BST(value);
