@@ -1,35 +1,33 @@
-const ava = require('ava');
-
 const BST = require('../../src/bst');
 
-ava.test('depth === 0', t => {
+it('depth === 0', () => {
   const bst = new BST(10);
 
-  t.is(bst.depth(), 0);
+  expect(bst.depth()).toBe(0);
 });
 
-ava.test('depth === 1', t => {
+it('depth === 1', () => {
   const bst = new BST(10);
   bst.insert(15);
   bst.insert(5);
 
-  t.is(bst.depth(), 1);
+  expect(bst.depth()).toBe(1);
 });
 
-ava.test('depth === 2', t => {
+it('depth === 2', () => {
   const bst = new BST(10);
   bst.insert(15);
   bst.insert(20);
 
-  t.is(bst.depth(), 2);
+  expect(bst.depth()).toBe(2);
 });
 
-ava.test('depth === 100', t => {
+it('depth === 100', () => {
   const bst = new BST(0);
 
   for (let i = 1; i <= 100; i++) {
     bst.insert(i);
   }
 
-  t.is(bst.depth(), 100);
+  expect(bst.depth()).toBe(100);
 });

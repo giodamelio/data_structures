@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "ava",
-    "cover": "nyc ava",
+    "test": "jest test/",
+    "cover": "jest --coverage test/",
     "lint": "eslint src/ test/",
     "docs": "jsdoc -c ./.jsdoc.json src/"
   },
@@ -13,8 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@giodamelio/eslint-config-thehelpining": "^0.1.0",
-    "ava": "^0.18.1",
     "eslint": "^3.15.0",
+    "jest": "^20.0.4",
     "jsdoc": "^3.4.3",
     "minami": "^1.2.3",
     "nyc": "^10.1.2"
@@ -30,5 +30,6 @@
       "text",
       "text-summary"
     ]
-  }
+  },
+  "devDependencies": {}
 }

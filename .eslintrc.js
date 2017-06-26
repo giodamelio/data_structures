@@ -9,5 +9,6 @@ module.exports = {
     'no-invalid-this': 'off',
     'func-names': 'off',
     'valid-jsdoc': 'off',
-  }
+    'filenames/match-regex': 'off',
+  },
 };

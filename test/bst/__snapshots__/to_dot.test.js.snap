@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multiple nodes 1`] = `
+"graph {
+  10 -- 5[color=red]
+  10 -- 15[color=green]
+  15 -- 20[color=green]
+  20
+  5
+}
+"
+`;
+
+exports[`one node 1`] = `
+"graph {
+  10
+}
+"
+`;

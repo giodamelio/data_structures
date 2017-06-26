@@ -1,19 +1,17 @@
-const ava = require('ava');
-
 const BST = require('../../src/bst');
 
-ava.test('one node', t => {
+it('one node', () => {
   const bst = new BST(10);
 
-  t.is(bst.size(), 1);
+  expect(bst.size()).toBe(1);
 });
 
-ava.test('many nodes', t => {
+it('many nodes', () => {
   const bst = new BST(0);
   for (let i = 1; i <= 100; i++) {
     bst.insert(100 - i);
     bst.insert(100 + i);
   }
 
-  t.is(bst.size(), 200);
+  expect(bst.size()).toBe(200);
 });

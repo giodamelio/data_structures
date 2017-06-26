@@ -1,43 +1,41 @@
-const ava = require('ava');
-
 const BST = require('../../src/bst');
 
-ava.test('no children', t => {
+it('no children', () => {
   const bst = new BST(10);
-  t.is(bst.balance(), 0);
+  expect(bst.balance()).toBe(0);
 });
 
-ava.test('balanced chilren', t => {
+it('balanced chilren', () => {
   const bst = new BST(10);
   bst.insert(5);
   bst.insert(15);
-  t.is(bst.balance(), 0);
+  expect(bst.balance()).toBe(0);
 });
 
-ava.test('left higher', t => {
+it('left higher', () => {
   const bst = new BST(10);
   bst.insert(5);
   bst.insert(7);
   bst.insert(15);
-  t.is(bst.balance(), 1);
+  expect(bst.balance()).toBe(1);
 });
 
-ava.test('left way higher', t => {
+it('left way higher', () => {
   const bst = new BST(101);
 
   for (let i = 1; i <= 100; i++) {
     bst.insert(i);
   }
 
-  t.is(bst.balance(), 99);
+  expect(bst.balance()).toBe(99);
 });
 
-ava.test('right way higher', t => {
+it('right way higher', () => {
   const bst = new BST(0);
 
   for (let i = 1; i <= 100; i++) {
     bst.insert(i);
   }
 
-  t.is(bst.balance(), -99);
+  expect(bst.balance()).toBe(-99);
 });
