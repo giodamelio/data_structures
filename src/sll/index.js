@@ -14,5 +14,6 @@ function SLL(value) {
 }
 
 require('./insert')(SLL);
+require('./middle')(SLL);
 
 module.exports = SLL;
