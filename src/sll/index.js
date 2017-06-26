@@ -13,4 +13,6 @@ function SLL(value) {
   this.next = null;
 }
 
+require('./insert')(SLL);
+
 module.exports = SLL;
