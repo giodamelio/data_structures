@@ -2,7 +2,7 @@ const ava = require('ava');
 
 const BST = require('../../src/bst');
 
-ava.test('smaller item', (t) => {
+ava.test('smaller item', t => {
   const bst = new BST(10);
   const newNode = bst.insert(5);
 
@@ -10,7 +10,7 @@ ava.test('smaller item', (t) => {
   t.is(newNode.value, 5);
 });
 
-ava.test('bigger item', (t) => {
+ava.test('bigger item', t => {
   const bst = new BST(10);
   const newNode = bst.insert(15);
 
@@ -18,7 +18,7 @@ ava.test('bigger item', (t) => {
   t.is(newNode.value, 15);
 });
 
-ava.test('existing item', (t) => {
+ava.test('existing item', t => {
   const bst = new BST(10);
   const copy = bst.insert(10);
 
@@ -28,7 +28,7 @@ ava.test('existing item', (t) => {
   t.is(bst.left, null);
 });
 
-ava.test('many item', (t) => {
+ava.test('many item', t => {
   const bst = new BST(10);
   for (let i = 1; i <= 10; i++) {
     bst.insert(10 - i);
