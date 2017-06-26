@@ -15,5 +15,6 @@ function SLL(value) {
 
 require('./insert')(SLL);
 require('./middle')(SLL);
+require('./for_each')(SLL);
 
 module.exports = SLL;
