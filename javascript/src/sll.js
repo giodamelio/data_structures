@@ -15,17 +15,17 @@ class SLL {
   }
 
   /**
-   * Insert a new node into the sll.
+   * Append a new node to the sll.
    * @param {Any} value - The value for the new node
    * @returns {SLL} New SLL node
    * @example
    * const sll = new SLL(10);
-   * const newNode = sll.insert(5); // Returns new node
+   * const newNode = sll.append(5); // Returns new node
    * assert(sll.next === newNode);
    */
-  insert(value) {
+  append(value) {
     if (this.next) {
-      return this.next.insert(value);
+      return this.next.append(value);
     }
 
     const newNode = new SLL(value);
@@ -38,8 +38,8 @@ class SLL {
    * @returns {SLL} Middle SLL node
    * @example
    * const sll = new SLL(10);
-   * sll.insert(20);
-   * sll.insert(30);
+   * sll.append(20);
+   * sll.append(30);
    * assert(sll.middle().value === 20);
    */
   middle() {
@@ -59,8 +59,8 @@ class SLL {
    * @param {Function} callback - Called on each node
    * @example
    * const sll = new SLL(10);
-   * sll.insert(20);
-   * sll.insert(30);
+   * sll.append(20);
+   * sll.append(30);
    * sll.forEach((node) => console.log(node)); // Logs each node in sll
    */
   forEach(callback) {
