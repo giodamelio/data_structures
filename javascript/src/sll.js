@@ -34,6 +34,21 @@ class SLL {
   }
 
   /**
+   * Prepend a new node to the sll.
+   * @param {Any} value - The value for the new node
+   * @returns {SLL} New SLL node
+   * @example
+   * const sll = new SLL(10);
+   * const newNode = sll.prepend(5); // Returns new node
+   * assert(newNode.next === sll);
+   */
+  prepend(value) {
+    const newNode = new SLL(value);
+    newNode.next = this;
+    return newNode;
+  }
+
+  /**
    * Find the middle of an SLL
    * @returns {SLL} Middle SLL node
    * @example
